@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { getUser, isLoggedIn } from "../services/auth"
+import "./scss/index.scss"
 
 const IndexPage = () => (
   <Layout>
@@ -18,10 +19,10 @@ const IndexPage = () => (
               <Link to="/app/profile"> profile </Link>
             </>
           ) : (
-            <>
+            <div>
               You should <Link to="/app/login"> Log In </Link>
               to see restricted content 
-            </>
+            </div>
           ) 
       }
 

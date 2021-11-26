@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, navigate } from 'gatsby'
 import { getUser, isLoggedIn, logout } from '../services/auth'
+import "./scss/nav-bar.scss";
 
 export default function NavBar() {
 
@@ -19,12 +20,7 @@ export default function NavBar() {
 
     return (
         <div
-            style={{
-                display: "flex",
-                flex: "1",
-                justifyContent: "space-between",
-                borderBottom: "1px solid #d1c1e0",
-            }}      
+            className="navbar"      
         >
             <span> {greetingMessage} </span>
 

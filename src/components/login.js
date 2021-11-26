@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 import { navigate } from 'gatsby'
 import { handleLogin, isLoggedIn } from '../services/auth'
-
+import "./scss/login.scss";
 const defaultValues = {
     username: '',
     password: ''
@@ -36,20 +36,23 @@ const Login = () => {
                 method="post"
                 onSubmit={handleSubmit}
             >
-                <label>
-                    Username
+                <div className="loginbox">
+                    <label>
+                        Username 
+                    </label>
                     <input type="text" name="username" onChange={handleUpdate} />
-                </label>
-                <label>
-                    Password
+                    <label>
+                        Password
+                    </label>
                     <input
-                        type="password" 
-                        name="password" 
-                        onChange={handleUpdate} 
-                    />
-                </label>
+                            type="password" 
+                            name="password" 
+                            onChange={handleUpdate} 
+                        />
+                    <br />
+                    <input className="logbutton" type="submit" value="Log In" />
 
-                <input type="submit" value="Log In" />
+                </div>
                 
             </form>
         </>
