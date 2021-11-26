@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import NavBar from "./nav-bar"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -32,7 +33,8 @@ const Layout = ({ children }) => {
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
-      >
+      > 
+        <NavBar />
         <main>{children}</main>
         <footer
           style={{
